@@ -191,6 +191,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     else {
                         String f = firstNumber.getText().toString();
                         firstNumber.setText(f.substring(0, f.length() - 1));
+                        ///////////////////////////
+                        System.out.println("asdfilhjs;dlkfhas");
                     }
                 }
                 break;
