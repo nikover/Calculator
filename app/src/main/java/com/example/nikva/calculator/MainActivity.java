@@ -234,6 +234,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
 
+            //Сложение
             case R.id.addition:
                 if (operationsCounter >= 1) {
                     Toast.makeText(this, "В данной версии можно выполнять только одну операцию.",
@@ -274,9 +275,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 for (int i = 0; i < listOfNumbers.size(); i++){
                     result += (Float) listOfNumbers.get(i);
                 }
-                if (fraction(result) == 0.0){
+                if (fraction(result) == 0.0 & !String.valueOf(result).contains("E")){
                     tvResult.setText(String.valueOf(result).substring(0, String.valueOf(result).length() - 2));
                 }
+                else
+                    tvResult.setText(String.valueOf(result));
                 operationsCounter = 0;
                 listOfNumbers.clear();
                 break;
